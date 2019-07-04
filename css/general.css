@@ -205,12 +205,14 @@ input[type=checkbox]:checked ~ .folder {
   color: #9898a6;
   box-sizing: border-box; }
   .tabs-item {
+    position: relative;
     padding: 0 15px 20px 15px;
     list-style-type: none;
     box-sizing: border-box;
     cursor: pointer;
     transition: color 0.3s ease-in-out;
-    user-select: none; }
+    user-select: none;
+    bottom: -2px; }
     .tabs-item--active {
       color: black;
       border-bottom: 2px solid #1c00ff;
