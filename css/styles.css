@@ -1,16 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap");
 .far {
   font-size: 18px;
   color: #9898a6;
@@ -134,10 +122,10 @@ input[type=checkbox]:checked ~ .folder {
       font-size: 13px; }
   .table__heading {
     padding-left: 10px; }
-  .table__header {
+  .table__main-cell {
     display: flex;
     align-items: center;
-    padding-left: 10px; }
+    padding-left: 30px; }
 
 .container {
   max-width: 1360px;
@@ -212,7 +200,7 @@ input[type=checkbox]:checked ~ .folder {
 .tabs {
   display: flex;
   padding-left: 0;
-  border-bottom: 1.5px solid #dcdce1;
+  border-bottom: 2px solid #dcdce1;
   width: 600px;
   color: #9898a6;
   box-sizing: border-box; }
@@ -221,7 +209,7 @@ input[type=checkbox]:checked ~ .folder {
     list-style-type: none;
     box-sizing: border-box;
     cursor: pointer;
-    transition: 0.2s ease-in-out;
+    transition: color 0.3s ease-in-out;
     user-select: none; }
     .tabs-item--active {
       color: black;
@@ -241,19 +229,86 @@ input[type=checkbox]:checked ~ .folder {
   margin: 50px 0; }
 
 .categories {
-  display: flex;
-  justify-content: space-between; }
-  .categories-wrapper {
-    background-color: #EFEFEF;
-    padding: 25px 20px;
-    border-radius: 5px; }
-  .categories__additional {
+  background-color: #EFEFEF;
+  padding: 25px 20px;
+  border-radius: 5px; }
+  .categories__header {
+    display: flex;
+    justify-content: space-between; }
+  .categories__buttons {
     font-size: 14px; }
   .categories__button {
     margin-left: 7px; }
     .categories__button--add {
       color: #1c00ff;
       font-weight: 600; }
+  .categories__block {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 25px 0;
+    color: #9898a6; }
+  .categories__bottom {
+    display: flex;
+    flex-direction: column-reverse; }
+  .categories__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    width: 32%;
+    height: 185px;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease-in-out;
+    cursor: pointer; }
+    .categories__item:hover {
+      box-shadow: 0px 0px 20px rgba(28, 0, 255, 0.22); }
+  .categories__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .categories__info--left {
+      display: flex;
+      align-items: center; }
+  .categories__icon {
+    display: flex;
+    padding: 7px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 1; }
+    .categories__icon:hover {
+      z-index: 5; }
+    .categories__icon-wrapper {
+      display: flex;
+      margin: 0 5px; }
+    .categories__icon--left {
+      background-color: #0a0e0d; }
+    .categories__icon--middle {
+      background-color: #2f5861;
+      margin-left: -15px; }
+    .categories__icon--right {
+      background-color: #333a63;
+      margin-left: -15px; }
+  .categories__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 55px; }
+  .categories__heading {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    overflow: hidden;
+    line-height: 35px; }
+  .categories__additional {
+    font-size: 14px; }
 
 .square {
   height: 15px;
@@ -278,85 +333,9 @@ input[type=checkbox]:checked ~ .folder {
   justify-content: space-between;
   min-height: 110px; }
 
-.templates__block {
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-  padding: 25px 0;
-  color: #9898a6; }
-
-.templates__item {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: white;
-  width: 32%;
-  height: 185px;
-  padding: 15px;
-  box-sizing: border-box;
-  border-radius: 3px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-  transition: box-shadow 0.3s ease-in-out;
-  cursor: pointer; }
-  .templates__item:hover {
-    box-shadow: 0px 0px 20px rgba(28, 0, 255, 0.22); }
-
-.templates__info, .templates__icon {
-  display: flex; }
-
-.templates__info {
-  align-items: center;
-  justify-content: space-between; }
-  .templates__info--left {
-    display: flex;
-    align-items: center; }
-
-.templates__icon {
-  padding: 7px;
-  color: white;
-  border: 1px solid white;
-  border-radius: 25px;
-  cursor: pointer;
-  z-index: 1; }
-  .templates__icon:hover {
-    z-index: 5; }
-  .templates__icon-wrapper {
-    display: flex;
-    margin: 0 5px; }
-  .templates__icon--left {
-    background-color: #0a0e0d; }
-  .templates__icon--middle {
-    background-color: #2f5861;
-    margin-left: -15px; }
-  .templates__icon--right {
-    background-color: #333a63;
-    margin-left: -15px; }
-
-.templates__heading {
-  display: flex;
-  align-items: center;
-  font-size: 25px;
-  font-weight: 600;
-  color: black;
-  overflow: hidden;
-  line-height: 35px; }
-
-.templates__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 55px; }
-
 .templates__more {
   text-align: center;
   font-size: 14px; }
-
-.templates__additional {
-  font-size: 14px; }
-
-.templates__bottom {
-  display: flex;
-  flex-direction: column-reverse; }
 
 .global__header {
   display: flex;
