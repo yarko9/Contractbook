@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contractbook</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <div class="header--left">
+            <div class="header__logo">
+              <i class="fab fa-artstation"></i>
+              <p class="header__heading">Contractbook</p>
+            </div>
+            <nav class="navigation">
+              <ul class="navigation__menu">
+                <li class="navigation__link navigation__link--active">Templates</li>
+                <li class="navigation__link">Drafts</li>
+                <li class="navigation__link">Contracts</li>
+                <li class="navigation__link">Team</li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header--right">
+            <div class="header__additional">
+              <div class="header__item">
+                <a href="#" class="link">Help</a>
+              </div>
+              <div class="header__item">
+                <i class="far fa-comment-alt icon--header"></i>
+              </div>
+              <div class="header__item">
+                <i class="far fa-bell icon--header"></i>
+              </div>
+              <div class="header__item header__item--no_border">
+                <i class="far fa-user icon--header"></i>
+                <select name="users" class="select">
+                  <option value="user1" class="select__item">Richard Hendricks</option>
+                  <option value="user2" class="select__item">Walter White</option>
+                  <option value="user3" class="select__item">Jessy Pinkman</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="main-inner">
+          <div class="aside">
+            <div class="aside__button">
+              <button class="button button--create">Create new document</button>
+            </div>
+            <div class="aside__input">
+                <input type="text" class="input input--search" placeholder="Search templates">
+            </div>
+            <div class="aside__block">
+              <div class="aside__heading">
+                <p class="heading heading--aside">Folders</p>
+              </div>
+              <div class="aside__item aside__folder">
+                <input type="checkbox" id="my-templates">
+                <label class="aside__item-text label" for="my-templates"><i class="far fa-folder-open"></i> My templates</label>
+                <div class="folder folder--my">
+                  <div class="folder__item"><i class="far fa-folder"></i> Employees Templates</div>
+                  <div class="folder__item"><i class="far fa-folder"></i> Customer Templates</div>
+                  <div class="folder__item folder__item--last"><i class="far fa-folder"></i> Random</div>
+                </div>
+              </div>
+              <div class="aside__item aside__folder">
+                <input type="checkbox" id="legal-templates">
+                <label class="aside__item-text label" for="legal-templates"><i class="far fa-folder-open"></i> Legal templates</label>
+                <div class="folder folder--my">
+                  <div class="folder__item"><i class="far fa-folder"></i> Employees Templates</div>
+                  <div class="folder__item"><i class="far fa-folder"></i> Customer Templates</div>
+                  <div class="folder__item folder__item--last"><i class="far fa-folder"></i> Random</div>
+                </div>
+              </div>
+              <div class="aside__item aside__folder">
+                <input type="checkbox" id="contractbook-templates">
+                <label class="aside__item-text label" for="contractbook-templates"><i class="far fa-folder-open"></i> Contractbook templates</label>
+                <div class="folder folder--my">
+                  <div class="folder__item"><i class="far fa-folder"></i> Employees Templates</div>
+                  <div class="folder__item"><i class="far fa-folder"></i> Customer Templates</div>
+                  <div class="folder__item folder__item--last"><i class="far fa-folder"></i> Random</div>
+                </div>
+              </div>
+            </div>
+            <div class="aside__block">
+              <div class="aside__heading">
+                <p class="heading heading--aside">Categories</p>
+              </div>
+              <div class="aside__item">
+                <div class="square square--green square--small"></div>
+                <p class="aside__item-text">#HR</p>
+                <i class="fas fa-crown"></i>
+              </div>
+              <div class="aside__item">
+                <div class="square square--purple square--small"></div>
+                <p class="aside__item-text">#Startup</p>
+                <i class="fas fa-crow"></i>
+              </div>
+              <div class="aside__item">
+                <div class="square square--blue square--small"></div>
+                <p class="aside__item-text">#Sales</p>
+                <i class="fas fa-crow"></i>
+              </div>
+              <div class="aside__item">
+                <div class="square square--green square--small"></div>
+                <p class="aside__item-text">#Design</p>
+                <i class="fas fa-crown"></i>
+              </div>
+              <div class="aside__item">
+                <div class="square square--purple square--small"></div>
+                <p class="aside__item-text">#Legal Tech</p>
+                <i class="fas fa-crow"></i>
+              </div>
+              <div class="aside__item">
+                <div class="square square--blue square--small"></div>
+                <p class="aside__item-text">#Growth Hacking</p>
+                <i class="fas fa-crown"></i>
+              </div>
+            </div>
+          </div>
+          <div class="main__content">
+            <section class="section section--templates">
+              <div class="templates">
+                <div class="templates__header">
+                  <p class="heading heading--large">Templates</p>
+                  <ul class="tabs tabs--templates" data-tab-content="templates">
+                    <li class="tabs-item tabs-item--templates" data-tab-id="all">All</li>
+                    <li class="tabs-item tabs-item--templates" data-tab-id="personal">Your Templates</li>
+                    <li class="tabs-item tabs-item--templates tabs-item--active" data-tab-id="global" data-tab-default-active>Global Templates</li>
+                  </ul>
+                </div>
+                <div class="categories-wrapper">
+                  <div class="categories">
+                    <p class="heading">Categories</p>
+                    <div class="categories__additional">
+                      <a class="categories__button categories__button--share">
+                        <i class="fas fa-code-branch"></i>
+                        <span>Share categories</span>
+                      </a>
+                      <a class="categories__button categories__button--add">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Add category</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="templates__block">
+                    <div class="templates__item">
+                      <div class="templates__info">
+                        <p>Shared with</p>
+                        <div class="templates__icon-wrapper">
+                          <p class="templates__icon templates__icon--left">DC</p>
+                          <p class="templates__icon templates__icon--middle">MT</p>
+                          <p class="templates__icon templates__icon--right">NB</p>
+                        </div>
+                        <p>+ 33 others</p>
+                      </div>
+                      <div class="templates__content">
+                        <div class="templates__heading">
+                          <div class="square square--green"></div>
+                          <p>#HR</p>
+                        </div>
+                        <p class="templates__additional">39 Templates</p>
+                      </div>
+                    </div>
+                    <div class="templates__item">
+                      <div class="templates__info">
+                        <p>Shared with</p>
+                        <div class="templates__icon-wrapper">
+                          <p class="templates__icon templates__icon--left">PD</p>
+                          <p class="templates__icon templates__icon--middle">TL</p>
+                          <p class="templates__icon templates__icon--right">BC</p>
+                        </div>
+                        <p>+ 24 others</p>
+                      </div>
+                      <div class="templates__content">
+                        <div class="templates__heading">
+                          <div class="square square--purple"></div>
+                          <p>#Startup</p>
+                        </div>
+                        <p class="templates__additional">24 Templates</p>
+                      </div>
+                    </div>
+                    <div class="templates__item">
+                      <div class="templates__info">
+                        <p>Shared with</p>
+                        <div class="templates__icon-wrapper">
+                          <p class="templates__icon templates__icon--left">LK</p>
+                          <p class="templates__icon templates__icon--middle">PP</p>
+                          <p class="templates__icon templates__icon--right">NK</p>
+                        </div>
+                        <p>+ 18 others</p>
+                      </div>
+                      <div class="templates__content">
+                        <div class="templates__heading">
+                          <div class="square square--blue"></div>
+                          <p>#Sales</p>
+                        </div>
+                        <p class="templates__additional">14 Templates</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="templates__bottom">
+                    <input type="checkbox" id="reveal-email" role="button">
+                    <label for="reveal-email" class="label label--categories" id="checked">More categories</label>
+                    <label for="reveal-email" class="label label--categories" id="unchecked">Less categories</label>
+                    <div class="templates__block" id="email">
+                      <div class="templates__item">
+                        <div class="templates__info">
+                          <p>Shared with</p>
+                          <div class="templates__icon-wrapper">
+                            <p class="templates__icon templates__icon--left">DC</p>
+                            <p class="templates__icon templates__icon--middle">MT</p>
+                            <p class="templates__icon templates__icon--right">NB</p>
+                          </div>
+                          <p>+ 12 others</p>
+                        </div>
+                        <div class="templates__content">
+                          <div class="templates__heading">
+                            <div class="square square--blue"></div>
+                            <p>#Design</p>
+                          </div>
+                          <p class="templates__additional">14 Templates</p>
+                        </div>
+                      </div>
+                      <div class="templates__item">
+                        <div class="templates__info">
+                          <p>Shared with</p>
+                          <div class="templates__icon-wrapper">
+                            <p class="templates__icon templates__icon--left">PD</p>
+                            <p class="templates__icon templates__icon--middle">TL</p>
+                            <p class="templates__icon templates__icon--right">BC</p>
+                          </div>
+                          <p>+ 17 others</p>
+                        </div>
+                        <div class="templates__content">
+                          <div class="templates__heading">
+                            <div class="square square--green"></div>
+                            <p>#Legal Tech</p>
+                          </div>
+                          <p class="templates__additional">20 Templates</p>
+                        </div>
+                      </div>
+                      <div class="templates__item">
+                        <div class="templates__info">
+                          <p>Shared with</p>
+                          <div class="templates__icon-wrapper">
+                            <p class="templates__icon templates__icon--left">LK</p>
+                            <p class="templates__icon templates__icon--middle">PP</p>
+                            <p class="templates__icon templates__icon--right">NK</p>
+                          </div>
+                          <p>+ 38 others</p>
+                        </div>
+                        <div class="templates__content">
+                          <div class="templates__heading">
+                            <div class="square square--purple"></div>
+                            <p>#Growth Hacking</p>
+                          </div>
+                          <p class="templates__additional">41 Templates</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section section--global" data-tab-content-id="templates">
+              <div class="global tabs-content tabs-content--visible" data-tab="global">
+                <div class="global__header">
+                  <div class="global__heading">
+                    <p class="heading">All Global Templates</p>
+                  </div>
+                  <div class="global__select">
+                    <label for="sort" class="global__label">Sort by:</label>
+                    <select id="sort" class="select select--sort">
+                      <option value="A" class="select__option">Contract name: A-Z</option>
+                      <option value="Z" class="select__option">Contract name: Z-A</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="global__content">
+                  <table class="table">
+                    <tr class="table-row">
+                      <td class="table-cell">
+                        <div class="table__header">
+                          <i class="fas fa-file-code"></i>
+                          <p class="table__heading">COUSR - Contractbook introduction</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div>
+                          <p class="table__description">Created at:</p>
+                          <p class="table__description--content">28 Nov 2018</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div>
+                          <p class="table__description">Last updated:</p>
+                          <p class="table__description--content">05 May 2019</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div>
+                          <p class="table__description">Owner:</p>
+                          <p class="table__description--content">Victor Smith</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div class="table__category">
+                          <div class="square square--purple square--small"></div>
+                          <p class="table__description--content">#Startup</p>
+                        </div>
+                      </td>
+                      <td class="table-cell table-cell--empty"></td>
+                    </tr>
+                    <tr class="table-row">
+                      <td class="table-cell">
+                        <div class="table__header">
+                          <i class="fas fa-file-code"></i>
+                          <p class="table__heading">Commercial lease agreement</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div>
+                          <p class="table__description">Created at:</p>
+                          <p class="table__description--content">03 Mar 2018</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div>
+                          <p class="table__description">Last updated:</p>
+                          <p class="table__description--content">04 Apr 2018</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div>
+                          <p class="table__description">Owner:</p>
+                          <p class="table__description--content">Harvey Specter</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div class="table__category">
+                          <div class="square square--green square--small"></div>
+                          <p class="table__description--content">#HR</p>
+                        </div>
+                      </td>
+                      <td class="table-cell table-cell--empty"></td>
+                    </tr>
+                    <tr class="table-row">
+                      <td class="table-cell">
+                        <div class="table__header">
+                          <i class="fas fa-file-code"></i>
+                          <p class="table__heading">Consultant agreement</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div>
+                          <p class="table__description">Created at:</p>
+                          <p class="table__description--content">30 Sep 2018</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div>
+                          <p class="table__description">Last updated:</p>
+                          <p class="table__description--content">07 Jun 2019</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div>
+                          <p class="table__description">Owner:</p>
+                          <p class="table__description--content">Victor Smith</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div class="table__category">
+                          <div class="square square--blue square--small"></div>
+                          <p class="table__description--content">#Sales</p>
+                        </div>
+                      </td>
+                      <td class="table-cell table-cell--empty"></td>
+                    </tr>
+                    <tr class="table-row">
+                      <td class="table-cell">
+                        <div class="table__header">
+                          <i class="fas fa-file-code"></i>
+                          <p class="table__heading">Shareholders Agreement Hummel</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div>
+                          <p class="table__description">Created at:</p>
+                          <p class="table__description--content">03 Mar 2018</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div>
+                          <p class="table__description">Last updated:</p>
+                          <p class="table__description--content">05 May 2019</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div>
+                          <p class="table__description">Owner:</p>
+                          <p class="table__description--content">Aaron Paul</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div class="table__category">
+                          <div class="square square--purple square--small"></div>
+                          <p class="table__description--content">#Design</p>
+                        </div>
+                      </td>
+                      <td class="table-cell table-cell--empty"></td>
+                    </tr>
+                    <tr class="table-row">
+                      <td class="table-cell">
+                        <div class="table__header">
+                          <i class="fas fa-file-code"></i>
+                          <p class="table__heading">Declaration of Content</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div>
+                          <p class="table__description">Created at:</p>
+                          <p class="table__description--content">14 Jun 2018</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div>
+                          <p class="table__description">Last updated:</p>
+                          <p class="table__description--content">18 Sep 2019</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div>
+                          <p class="table__description">Owner:</p>
+                          <p class="table__description--content">Walter White</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div class="table__category">
+                          <div class="square square--purple square--small"></div>
+                          <p class="table__description--content">#Legal Tech</p>
+                        </div>
+                      </td>
+                      <td class="table-cell table-cell--empty"></td>
+                    </tr>
+                    <tr class="table-row">
+                      <td class="table-cell">
+                        <div class="table__header">
+                          <i class="fas fa-file-code"></i>
+                          <p class="table__heading">Commercial lease agreement</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div>
+                          <p class="table__description">Created at:</p>
+                          <p class="table__description--content">23 May 2018</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div>
+                          <p class="table__description">Last updated:</p>
+                          <p class="table__description--content">05 Nov 2019</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div>
+                          <p class="table__description">Owner:</p>
+                          <p class="table__description--content">Aaron Paul</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div class="table__category">
+                          <div class="square square--blue square--small"></div>
+                          <p class="table__description--content">#Growth Healing</p>
+                        </div>
+                      </td>
+                      <td class="table-cell table-cell--empty"></td>
+                    </tr>
+                    <tr class="table-row">
+                      <td class="table-cell">
+                        <div class="table__header">
+                          <i class="fas fa-file-code"></i>
+                          <p class="table__heading">Contractbook introduction</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div>
+                          <p class="table__description">Created at:</p>
+                          <p class="table__description--content">24 Oct 2018</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div>
+                          <p class="table__description">Last updated:</p>
+                          <p class="table__description--content">28 Dec 2018</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div>
+                          <p class="table__description">Owner:</p>
+                          <p class="table__description--content">Jessy Pinkman</p>
+                        </div>
+                      </td>
+                      <td class="table-cell">
+                        <div class="table__category">
+                          <div class="square square--green square--small"></div>
+                          <p class="table__description--content">#HR</p>
+                        </div>
+                      </td>
+                      <td class="table-cell table-cell--empty"></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="tabs-content" data-tab="all">
+                123
+              </div>
+              <div class="tabs-content" data-tab="personal">
+                345
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+    </footer>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+  <script src="https://kit.fontawesome.com/5577416e84.js"></script>
+  <script src="js/tabs.js"></script>
+</body>
+</html>
