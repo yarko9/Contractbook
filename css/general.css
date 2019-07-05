@@ -110,7 +110,7 @@ input[type=checkbox]:checked ~ .folder {
   .table-cell {
     border-spacing: 0; }
     .table-cell--empty {
-      width: 150px; }
+      width: 120px; }
   .table__category {
     display: flex;
     align-items: center; }
@@ -120,19 +120,29 @@ input[type=checkbox]:checked ~ .folder {
     padding-bottom: 5px; }
     .table__description--content {
       font-size: 13px; }
-  .table__heading {
+  .table__row-heading {
     padding-left: 10px; }
   .table__main-cell {
     display: flex;
     align-items: center;
     padding-left: 30px; }
+  @media (max-width: 480px) {
+    .table-row {
+      height: 145px; }
+    .table__main-cell {
+      padding-left: 10px; }
+    .table-cell--empty {
+      display: none; }
+    .table__row-heading {
+      font-size: 13px; } }
 
 .container {
   max-width: 1360px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow: hidden; }
 
 .navigation {
   display: flex;
@@ -146,6 +156,18 @@ input[type=checkbox]:checked ~ .folder {
     color: #9898a6; }
     .navigation__link--active {
       color: #1c00ff; }
+  .navigation--full {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    height: 100%;
+    width: 100vw;
+    background-color: antiquewhite; }
+    .navigation--full .navigation__menu {
+      flex-direction: column; }
+  @media (max-width: 590px) {
+    .navigation--main {
+      display: none; } }
 
 .select {
   outline: none;
@@ -196,6 +218,14 @@ input[type=checkbox]:checked ~ .folder {
     .header__item--no_border {
       border-right: none;
       padding-right: 0; }
+  @media (max-width: 980px) {
+    .header--right {
+      display: none; }
+    .header--left {
+      height: 80px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between; } }
 
 .tabs {
   display: flex;
@@ -221,11 +251,9 @@ input[type=checkbox]:checked ~ .folder {
     display: none; }
     .tabs-content--visible {
       display: block; }
-
-.tabs-content {
-  display: none; }
-  .tabs-content--visible {
-    display: block; }
+  @media (max-width: 980px) {
+    .tabs {
+      width: 100%; } }
 
 .section--global {
   margin: 50px 0; }
@@ -240,7 +268,11 @@ input[type=checkbox]:checked ~ .folder {
   .categories__buttons {
     font-size: 14px; }
   .categories__button {
-    margin-left: 7px; }
+    margin-left: 7px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out; }
+    .categories__button:hover {
+      color: #110099; }
     .categories__button--add {
       color: #1c00ff;
       font-weight: 600; }
@@ -299,8 +331,7 @@ input[type=checkbox]:checked ~ .folder {
   .categories__content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 55px; }
+    justify-content: space-between; }
   .categories__heading {
     display: flex;
     align-items: center;
@@ -311,6 +342,25 @@ input[type=checkbox]:checked ~ .folder {
     line-height: 35px; }
   .categories__additional {
     font-size: 14px; }
+  @media (max-width: 750px) {
+    .categories__block {
+      flex-direction: column;
+      align-items: center;
+      padding: 0; }
+    .categories__item {
+      width: 85%;
+      margin: 25px 0;
+      height: 200px;
+      padding: 25px; } }
+  @media (max-width: 480px) {
+    .categories__header {
+      flex-direction: column; }
+    .categories__buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between; }
+    .categories__item {
+      width: 100%; } }
 
 .square {
   height: 15px;
@@ -357,8 +407,18 @@ input[type=checkbox]:checked ~ .folder {
     padding-top: 25px; }
   .main__content {
     width: 81%;
-    margin-left: 20px;
+    padding-left: 28px;
     padding-top: 28px; }
+  @media (max-width: 980px) {
+    .main-inner {
+      flex-direction: column; }
+    .main__content {
+      width: 100%;
+      padding: 28px;
+      box-sizing: border-box; } }
+  @media (max-width: 480px) {
+    .main__content {
+      padding: 0; } }
 
 .aside {
   width: 19%;
@@ -382,6 +442,19 @@ input[type=checkbox]:checked ~ .folder {
   .aside__folder {
     flex-direction: column;
     align-items: flex-start; }
+  @media (max-width: 980px) {
+    .aside {
+      width: 100%; }
+      .aside__button, .aside__input {
+        display: flex;
+        justify-content: center; }
+      .aside .button, .aside .input {
+        width: 450px; }
+      .aside__block {
+        padding: 0 35px; } }
+  @media (max-width: 480px) {
+    .aside__block {
+      padding: 0; } }
 
 .folder {
   display: none;
